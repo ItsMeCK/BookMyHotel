@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'devise'
 
-gem 'john_hancock'
+# gem 'john_hancock'
 gem 'simple_form'
 gem 'will_paginate'
 #gem 'bootstrap-sass', '~> 3.2.0'
