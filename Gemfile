@@ -47,7 +47,7 @@ gem 'bootstrap', '~> 4.0.0'
 #gem 'sassc-rails', '>= 2.1.0'
 
 
-gem 'sprockets-rails', '>= 2.3.2'
+# gem 'sprockets-rails', '>= 2.3.2'
 gem 'autoprefixer-rails'
 gem 'carrierwave' 
 gem 'cancan'
