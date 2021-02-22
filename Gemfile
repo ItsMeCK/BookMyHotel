@@ -42,9 +42,9 @@ gem 'signature-pad-rails'
 # gem 'john_hancock'
 gem 'simple_form'
 gem 'will_paginate'
-gem 'bootstrap-sass', '~> 3.2.0'
+#gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap', '~> 4.0.0'
-gem 'sassc-rails', '>= 2.1.0'
+#gem 'sassc-rails', '>= 2.1.0'
 
 
 gem 'sprockets-rails', '>= 2.3.2'
