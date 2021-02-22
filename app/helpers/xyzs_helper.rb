@@ -1,0 +1,2 @@
+module XyzsHelper
+end

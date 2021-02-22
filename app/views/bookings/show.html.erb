@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @booking.customer_id %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @booking.room_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @booking.price %>
+</p>
+
+<p>
+  <strong>Check in:</strong>
+  <%= @booking.check_in %>
+</p>
+
+<p>
+  <strong>Check out:</strong>
+  <%= @booking.check_out %>
+</p>
+
+<p>
+  <strong>Number of people:</strong>
+  <%= @booking.number_of_people %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @booking.status %>
+</p>
+
+<p>
+  <strong>Signature:</strong>
+
+  <%= image_tag @booking.signature, style: 'height:10%;width:10%;' %>
+</p>
+
+<strong>Documents</strong>
+
+<% @booking.images.each do |i|%>
+  <p> 
+    <%= image_tag i, style: 'height:10%;width:10%;' %>
+  </p>
+
+<% end%>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

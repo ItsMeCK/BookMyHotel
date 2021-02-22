@@ -13,5 +13,28 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
+//= require bootstrap
+//= require john_hancock
+//= require signature_pad
+
 //= require_tree .
+//= require john_hancock
+//= require signature_pad
+
+
+
+$(function () {
+  // Sorting and pagination links.
+  
+  // Search form.
+  $('#customers_search').submit(function () {
+    $.get(this.action, $(this).serialize(), null, 'script');
+    return false;
+  });
+
+   $('#booking_check_out_1i').change(function () {
+    $.get("/rooms/get_available_rooms", $(this).serialize(), null, 'script');
+    return false;
+  });
+
+});

@@ -1,0 +1,85 @@
+
+
+
+<%= simple_form_for @booking do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+
+  <div class="form-row col-sm-12 col-lg-6">
+    <div class="form-group">
+      <%= f.label :customer_id %>
+      <%#= f.number_field :customer_id %>
+      <%= f.select :customer_id, @customer_options, class: 'form-control' %>
+    </div>
+  </div>
+
+
+  <div class="form-select col-sm-12 col-lg-6", id:"rooms_select">
+    <%= f.label :room_id %>
+    <%#= f.number_field :room_id %>
+    <%= f.select :room_id, @room_options, class:"form-select col-sm-12 col-lg-6" %>
+  </div>
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :check_in %>
+    <%= f.date_select :check_in %>
+  </div>
+
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :price %>
+    <%= f.text_field :price, class:"form-control" %>
+  </div>
+
+
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :check_out %>
+    <%= f.date_select :check_out, class:"form-control" %>
+  </div>
+
+
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :number_of_people %>
+    <%= f.text_field :number_of_people, class:"form-control" %>
+  </div>
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :status %>
+    <%= f.select :status, ["Booked", "CheckedIn", "CheckedOut", "Cancelled"] %>
+  </div>
+
+
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true, direct_upload: true %>
+  </div>
+
+  <%= f.input_field :signature, as: :hidden, class: 'signature_pad_input' %>
+
+  <div class="signature_pad text-center">
+    <div class="signature_pad_body">
+      <canvas></canvas>
+    </div>
+    <div class="signature_pad_footer">
+      <div class="text-muted">Sign above</div>
+      <button type="button" class="btn btn-default signature_pad_clear">Clear</button>
+    </div>
+  </div>
+
+  <div class="actions">
+      <%= f.button :submit, 'Save', class: 'btn btn-success signature_pad_save'  %>
+  </div>
+<% end %>

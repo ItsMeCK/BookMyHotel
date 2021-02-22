@@ -1,0 +1,3 @@
+// $("#booking_room_id").append('<option>Select Task</option>');
+// console.log('name = <%= escape_javascript @room_options.to_s %>');
+$('#rooms_select').html('<%= escape_javascript(render("room_options")) %>');

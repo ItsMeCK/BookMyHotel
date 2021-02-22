@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Xyzs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Signature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @xyzs.each do |xyz| %>
+      <tr>
+        <td><%= xyz.signature %></td>
+        <td><%= link_to 'Show', xyz %></td>
+        <td><%= link_to 'Edit', edit_xyz_path(xyz) %></td>
+        <td><%= link_to 'Destroy', xyz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Xyz', new_xyz_path %>
