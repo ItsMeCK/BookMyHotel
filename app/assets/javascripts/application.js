@@ -14,11 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require john_hancock
 //= require signature_pad
 
 //= require_tree .
-//= require john_hancock
 //= require signature_pad
 
 
