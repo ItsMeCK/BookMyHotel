@@ -36,7 +36,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'pg'
 gem 'devise'
-gem 'signature-pad-rails'
 
 
 # gem 'john_hancock'
