@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# ruby '2.5.7'
+ruby '2.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2'
 # Use sqlite3 as the database for Active Record
@@ -47,7 +47,7 @@ gem 'bootstrap', '~> 4.0.0'
 #gem 'sassc-rails', '>= 2.1.0'
 
 
-# gem 'sprockets-rails', '>= 2.3.2'
+gem 'sprockets-rails', '>= 2.3.2'
 gem 'autoprefixer-rails'
 gem 'carrierwave' 
 gem 'cancan'
