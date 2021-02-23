@@ -3,6 +3,7 @@
   <table class="table table-dark">
     <thead>
       <tr>
+        <th>ID </th>
         <th>Customer</th>
         <th>Room</th>
         <th>Price</th>
@@ -18,6 +19,7 @@
     <tbody >
       <% @bookings.each do |booking| %>
         <tr>
+          <td><%= booking.id %>  </td>
           <td><%= booking.customer.name %>  </td>
           <td><%= booking.room.room_number %></td>
           <td><%= booking.price %> </td>
