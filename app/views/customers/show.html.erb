@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p> 
+<%if  @customer.avatar.attached? %>
   <%= image_tag @customer.avatar, style: 'height:10%;width:10%;' %>
+<%end%>
 </p>
 
 <p>
