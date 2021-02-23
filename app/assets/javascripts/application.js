@@ -20,9 +20,6 @@
 //= require bootstrap-sprockets
 
 //= require_tree .
-//= require signature_pad
-//= require chartkick
-//= require Chart.bundle
 
 
 $(function () {
