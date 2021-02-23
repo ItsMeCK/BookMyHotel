@@ -6,12 +6,14 @@ Rails.application.configure do
   %w(stylesheets javascripts fonts images).each do |sub|
   config.assets.paths << ::Bootstrap::Rails::Engine.root.join('assets', sub)
 end
+
 config.assets.precompile << %r(bootstrap/glyphicons-halflings-regular\.(?:eot|svg|ttf|woff)$)
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+config.active_storage.service = :local
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
