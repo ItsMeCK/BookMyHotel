@@ -22,12 +22,12 @@
 
 <p>
   <strong>Check in:</strong>
-  <%= @booking.check_in %>
+  <%= @booking.check_in.in_time_zone(TZInfo::Timezone.get('Asia/Kolkata')) %>
 </p>
 
 <p>
   <strong>Check out:</strong>
-  <%= @booking.check_out %>
+  <%= @booking.check_out.in_time_zone(TZInfo::Timezone.get('Asia/Kolkata')) %>
 </p>
 
 <p>
