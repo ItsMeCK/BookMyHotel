@@ -13,7 +13,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -44,8 +44,8 @@ gem 'will_paginate'
 
 #gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap', '~> 4.0.0'
-gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# gem 'sassc-rails', '>= 2.1.0'
 
 
 gem 'sprockets-rails', '>= 2.3.2'
