@@ -7,21 +7,25 @@ class Booking < ApplicationRecord
 
 
 	def self.search(search)
-		result = nil
-		rooms = Room.where(room_number: search).pluck(:id)
-	    if rooms.any?
-	    puts "here"
-	      return where(room_id: rooms)
-	    end
+		if search
+			result = nil
+			rooms = Room.where(room_number: search).pluck(:id)
+		    if rooms.any?
+		    puts "here"
+		      return where(room_id: rooms)
+		    end
 
-	    search_date = search.to_date rescue nil
-	    checkindata = where(check_in: search_date).or(Booking.where(check_out: search_date))
+		    search_date = search.to_date rescue nil
+		    checkindata = where(check_in: search_date).or(Booking.where(check_out: search_date))
 
-	    if checkindata.any?
-	    	checkindata
-	    else
-	    	all
-	    end
+		    if checkindata.any?
+		    	checkindata
+		    else
+		    	all
+		    end
+		else
+			all
+		end
   	end
 
   	def self.current_bookings

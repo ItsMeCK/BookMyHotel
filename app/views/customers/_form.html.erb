@@ -49,6 +49,10 @@
 
   <%= f.fields_for :bookings do |f1| %>
 
+  <div class="field">
+    <%= f1.label :details %>
+    <%= f1.text_area :details %>
+  </div>
 
   <div class="form-select col-sm-12 col-lg-6", id:"rooms_select">
     <%= f1.label :room_id %>
@@ -101,14 +105,6 @@
     </div>
   </div>
 
-
-
-
-  <div class="form-select col-sm-12 col-lg-6", id:"rooms_select">
-    <%= f1.label :room_id %>
-    <%#= f.number_field :room_id %>
-    <%= f1.select :room_id, @room_options, class:"form-select col-sm-12 col-lg-6" %>
-  </div>
   <%end%>
 
   <div class="actions">
