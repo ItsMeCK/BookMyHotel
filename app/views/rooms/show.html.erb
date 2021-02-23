@@ -25,5 +25,14 @@
   <%= @room.active %>
 </p>
 
+<strong>Photos</strong>
+
+<% @room.images.each do |i|%>
+  <p> 
+    <%= image_tag i, class:'img-fluid' %>
+  </p>
+
+<% end%>
+
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

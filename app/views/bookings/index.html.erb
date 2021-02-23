@@ -1,4 +1,4 @@
-
+<!-- 
 
 <div class="container">
   <div class="row">
@@ -13,43 +13,18 @@
 
   </div>
 </div>
-
-
+ -->
 
 <h1>Bookings</h1>
 
+<%= form_tag bookings_path, :method => 'get', :id => "bookings_search", class: 'form-inline my-2 my-lg-0' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], class: 'form-control mr-sm-2' %>
+    <%= submit_tag "Search", :name => nil, class: 'btn btn-outline-success my-2 my-sm-0' %>
+  </p>
+<% end %>
 
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th>Customer</th>
-      <th>Room</th>
-      <th>Price</th>
-      <th>Check in</th>
-      <th>Check out</th>
-      <th>Number of people</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= will_paginate @customers %>
 
-  <tbody >
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.customer.name %>  </td>
-        <td><%= booking.room.room_number %></td>
-        <td><%= booking.price %> </td>
-        <td><%= booking.check_in %></td>
-        <td><%= booking.check_out %></td>
-        <td><%= booking.number_of_people %></td>
-        <td><%= booking.status %></td>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
+<div id="bookings"><%= render 'bookings' %></div>

@@ -51,6 +51,8 @@ gem 'sprockets-rails', '>= 2.3.2'
 gem 'autoprefixer-rails'
 gem 'carrierwave' 
 gem 'cancan'
+gem "chartkick"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

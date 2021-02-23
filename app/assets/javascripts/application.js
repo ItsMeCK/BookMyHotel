@@ -15,10 +15,13 @@
 //= require turbolinks
 //= require bootstrap
 //= require signature_pad
+//= require chartkick
+//= require Chart.bundle
 
 //= require_tree .
 //= require signature_pad
-
+//= require chartkick
+//= require Chart.bundle
 
 
 $(function () {

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'rooms/get_available_rooms'
-
+  get 'home/dashboard'
   resources :xyzs
   resources :customers
   resources :bookings

@@ -1,0 +1,9 @@
+<br><br> <br>
+
+<%= link_to 'Current Month Daily', home_dashboard_path(type: 'daily'), class:'btn btn-primary' %>
+
+<%= link_to 'Monthly Incode', home_dashboard_path(type: 'monthly'), class:'btn btn-secondary' %>
+
+<br><br> <br>
+
+<%= column_chart(@income)%>

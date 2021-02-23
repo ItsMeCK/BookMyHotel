@@ -36,6 +36,11 @@
     <%= f.check_box :active %>
   </div>
 
+  <div class="form-group col-sm-12 col-lg-6">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true, direct_upload: true %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
