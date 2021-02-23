@@ -13,12 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap
+
 //= require signature_pad
 //= require chartkick
 //= require Chart.bundle
-//= require bootstrap-sprockets
-
+//= require bootstrap
 //= require_tree .
 
 

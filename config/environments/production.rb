@@ -3,7 +3,10 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  %w(stylesheets javascripts fonts images).each do |sub|
+  config.assets.paths << ::Bootstrap::Rails::Engine.root.join('assets', sub)
+end
+config.assets.precompile << %r(bootstrap/glyphicons-halflings-regular\.(?:eot|svg|ttf|woff)$)
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
