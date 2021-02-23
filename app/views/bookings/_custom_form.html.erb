@@ -1,0 +1,13 @@
+<%= a =  local_assigns[:f1]%>
+
+ <div class="form-row col-sm-12 col-lg-6">
+    <div class="form-group">
+      <%= a.label :customer_id %>
+      <%#= f.number_field :customer_id %>
+      <%= a.select :customer_id, @customer_options, class: 'form-control' %>
+    </div>
+  </div>
+
+
+
+  

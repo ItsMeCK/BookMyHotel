@@ -15,6 +15,9 @@ class CustomersController < ApplicationController
   # GET /customers/new
   def new
     @customer = Customer.new
+    @booking = @customer.bookings.build
+    @customer_options = Customer.all.map { |u| [ u.name, u.id ] }
+      @room_options = Room.all.map { |r| [ r.room_number, r.id ] }
   end
 
   # GET /customers/1/edit
@@ -66,6 +69,6 @@ class CustomersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def customer_params
-      params.require(:customer).permit(:name, :email, :mobile, :birthdate, :address, :avatar)
+      params.require(:customer).permit(:name, :email, :mobile, :birthdate, :address, :avatar, bookings_attributes: [:customer_id, :room_id])
     end
 end
